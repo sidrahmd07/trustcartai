@@ -1,0 +1,17 @@
+# pack data and models must not go in the zip
+FULL_CODE/data/
+FULL_CODE/models/
+data/
+models/
+# secrets and environments
+.env
+.venv/
+# python / OS noise
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+# local score outputs
+dev_score.json
+score_details.jsonl
+# NOTE: do NOT ignore *.jsonl or submission/ - R3_predictions.jsonl must be committed

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TrustCart AI — Shopping You Can Trust</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><div class="brand-mark">✓</div><div><strong>TrustCart <span>AI</span></strong><small>SHOP WITH CONFIDENCE</small></div></div>
+      <button class="new-chat" id="newChat">＋ New conversation</button>
+      <div class="side-label">DEMO SCENARIOS</div>
+      <button class="scenario" data-query="Chargit QuillBolt red earphones kitne ke"><span class="scenario-icon green">✓</span><span><b>Verified answer</b><small>Price and stock from the catalogue</small></span></button>
+      <button class="scenario" data-query="green running shoes kitne ke hai"><span class="scenario-icon amber">?</span><span><b>Ambiguous product</b><small>Asks which one, never guesses</small></span></button>
+      <button class="scenario" data-query="redmi note 13 price"><span class="scenario-icon red">!</span><span><b>Not sold here</b><small>Refuses instead of inventing</small></span></button>
+      <button class="scenario" data-query="12000 ka order hai COD ho jayega?"><span class="scenario-icon blue">↗</span><span><b>Policy question</b><small>Cites the policy section</small></span></button>
+      <button class="scenario" data-query="mens linen kurta dikhao" data-multi="1500 ke andar wale?|inme sabse sasta kaunsa hai, price bhi batao"><span class="scenario-icon purple">⌕</span><span><b>Multi-turn shopping</b><small>Keeps product type and budget</small></span></button>
+      <div class="sidebar-bottom"><div class="status-dot"></div><span>Offline · no LLM</span><span class="demo-tag">SYNTHETIC DATA</span></div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div><div class="eyebrow">R3 · CONVERSATIONAL COMMERCE</div><h1>Shopping assistant</h1></div>
+        <div class="top-right"><span class="secure"><span>●</span> Evidence-first mode</span><div class="avatar">TC</div></div>
+      </header>
+      <section class="intro" id="intro">
+        <div class="intro-symbol">✳</div>
+        <div class="intro-copy"><div class="eyebrow light">WELCOME TO TRUSTCART AI</div><h2>Find the right product.<br><em>Trust every answer.</em></h2><p>Ask about products, prices, stock or store policies. Every factual answer should be backed by evidence.</p></div>
+        <div class="intro-orb orb-one"></div><div class="intro-orb orb-two"></div>
+      </section>
+      <div class="trust-strip"><span class="trust-icon">✓</span><div><b>Evidence before answers</b><small>Every price and fact is copied from the catalogue by code, then re-checked before it is shown.</small></div><span class="strip-note">BUILT FOR TRUST</span></div>
+
+      <section class="chat-area" id="chatArea" aria-live="polite">
+        <div class="empty-state" id="emptyState">
+          <h3>What are you looking for?</h3><p>Try one of these questions to see how TrustCart handles evidence.</p>
+          <div class="suggestions">
+            <button data-query="Chargit QuillBolt red earphones kitne ke"><span>↗</span> Price of a named product</button>
+            <button data-query="green running shoes kitne ke hai"><span>?</span> Vague product (clarify)</button>
+            <button data-query="redmi note 13 price"><span>⌁</span> Product we don't sell</button>
+            <button data-query="restocking fee lagti hai kya return pe"><span>↻</span> Return policy</button>
+          </div>
+        </div>
+      </section>
+
+      <form class="composer" id="chatForm">
+        <div class="composer-top"><span class="composer-lock">▣</span><span>Answers are limited to available evidence</span><span class="kbd">ENTER ↵</span></div>
+        <div class="composer-row"><input id="userInput" type="text" placeholder="Ask about a product, price, stock or policy…" autocomplete="off" /><button type="submit" aria-label="Send message">↑</button></div>
+      </form>
+      <footer><span>TRUSTCART AI</span><span>Synthetic Saffron Retail data · catalogue snapshot 1 Oct 2026</span></footer>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

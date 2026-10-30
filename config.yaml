@@ -1,0 +1,18 @@
+# All paths, thresholds and weights live here (no hard-coded constants in code).
+paths:
+  data_dir: data
+  catalogue: data/catalogue.csv
+  policy: data/policy.md
+  questions_dev: data/questions_dev.csv
+  questions_test: data/questions_test.csv
+  dev_truth: data/questions_dev_truth.jsonl
+  submission: ../submission/R3_predictions.jsonl
+retrieval:
+  min_score: 0.3        # below this -> "no match" -> refuse (tune on dev)
+  max_candidates: 10    # citing more than 10 products earns no credit
+llm:
+  enabled: false        # rules-only = 0 tokens, safest
+  timeout_s: 10
+server:
+  host: 127.0.0.1   # local only; never bind 0.0.0.0 for the demo
+  port: 8000
